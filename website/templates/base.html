@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/static/main.css">
+    <link rel="stylesheet" media"(prefers-color-scheme: light) href="/static/light.css">
+    <link rel="stylesheet" media"(prefers-color-scheme: dark) href="/static/dark.css">
+    <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -14,7 +18,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       crossorigin="anonymous"
     />
-
+    
     <title>{% block title %}Home{% endblock %}</title>
   </head>
   
@@ -31,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <a class="nav-item nav-link" id="note" href="/">Note</a>
           <ul>
             <li><a class="nav-item nav-link" id="note" href="/note">Notas</a></li>
             <li><a class="nav-item nav-link" id="config" href="/config">Configuration</a></li>
@@ -44,7 +48,14 @@
         </div>
       </div>
     </nav>
-
+    <main>
+      <dark-mode-toggle align="right"
+    id="dark-mode-toggle-1"
+    appearance="toggle"
+    dark="Dark"
+    light="Light"
+  ></dark-mode-toggle>
+   </main>
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
     'error' %}
