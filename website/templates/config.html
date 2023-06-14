@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dark and White Mode Example</title>
+    <style>
+        body {
+            background-color: #fff;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .mode-button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="mode-button" onclick="toggleMode()">Toggle Mode</button>
+
+    <h1>Configuration</h1>
+    <p>This page is to enable dark mode</p>
+
+    <script>
+        function toggleMode() {
+            var body = document.querySelector("body");
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
