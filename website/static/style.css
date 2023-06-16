@@ -1,0 +1,34 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    background-image: url('https://www.sony.es/image/bc6d25fa6371c2899ce704a2bed7614c?fmt=png-alpha&wid=960');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    color: black;
+}
+
+h3 {
+    color: black;
+}
+
+.navbar {
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(3, 3, 3);
+}

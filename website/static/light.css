@@ -1,7 +1,7 @@
 :root {
-  color: black;
+    color: black;
 }
 
 body{
-    background-color: azure;
+    --background-color: azure;
 }

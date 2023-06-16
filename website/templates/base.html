@@ -3,57 +3,42 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/static/main.css">
-    <link rel="stylesheet" media"(prefers-color-scheme: light) href="/static/light.css">
-    <link rel="stylesheet" media"(prefers-color-scheme: dark) href="/static/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" 
+    integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/light.css" media"(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/static/dark.css" media"(prefers-color-scheme: dark)">
     <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
     <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      crossorigin="anonymous"
-    />
-    
-    <title>{% block title %}Home{% endblock %}</title>
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous"
+  />
+        <title>{% block title %}Home{% endblock %}</title>
   </head>
   
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <button
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbar"
-      >    
+        data-target="#navbar">    
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar">
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link" id="note" href="/">Home</a>
-          <ul>
-            <li><a class="nav-item nav-link" id="note" href="/note">Notas</a></li>
-            <li><a class="nav-item nav-link" id="config" href="/config">Configuration</a></li>
-        </ul>
+          <a class="nav-item nav-link" id="home" href="/">Home</a>
           <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           {% else %}
           <a class="nav-item nav-link" id="login" href="/login">Login</a>
           <a class="nav-item nav-link" id="signUp" href="/sign-up">Sign Up</a>
           {% endif %}           
-        <dark-mode-toggle align="right"
-        id="dark-mode-toggle-1"
-        appearance="toggle"
-        light="Light"
-        dark="Dark">
-        </dark-mode-toggle>
         </div>
       </div>
-    </nav>
+  </nav>
   
     {% with messages = get_flashed_messages(with_categories=true) %} {% if
     messages %} {% for category, message in messages %} {% if category ==
