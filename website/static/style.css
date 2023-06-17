@@ -8,17 +8,21 @@
 
 body {
     background-color: black;
-    background-image: url('https://www.sony.es/image/bc6d25fa6371c2899ce704a2bed7614c?fmt=png-alpha&wid=960');
+    background-image: url('https://img1.wallspic.com/crops/4/9/7/5/3/135794/135794-ambiente-espacio-morado-estrella-negro-3840x2160.jpg');
     background-size: cover;
     background-position: center;
 }
 
 h1 {
-    color: black;
+    color: aqua;
 }
 
 h3 {
-    color: black;
+    color: aqua;
+}
+
+label {
+    color: aqua;
 }
 
 .navbar {
@@ -30,5 +34,14 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: rgb(3, 3, 3);
+    color: aqua;
 }
+
+.navbar-brand {
+    padding: 0px;
+  }
+  .navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+  }
