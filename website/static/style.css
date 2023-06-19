@@ -6,6 +6,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.form-login {
+    width: 400px;
+    height: 340px;
+    background: rgb(36, 54, 88);
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid rgb(149, 183, 245);
+    color: white;
+}
+
 body {
     background-color: black;
     background-image: url('https://img1.wallspic.com/crops/4/9/7/5/3/135794/135794-ambiente-espacio-morado-estrella-negro-3840x2160.jpg');
@@ -25,6 +37,11 @@ label {
     color: aqua;
 }
 
+p {
+    color: aqua;
+    text-align: center;
+    font-size: 20px;
+}
 .navbar {
     font-size: 20px;
     width: 100%;

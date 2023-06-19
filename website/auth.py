@@ -27,6 +27,10 @@ def login():
 
     return render_template("login.html", user=current_user)
 
+@auth.route('/')
+@login_required
+def home():
+    return render_template("home.html")
 
 @auth.route('/logout')
 @login_required
