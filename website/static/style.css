@@ -20,7 +20,7 @@
 
 body {
     background-color: black;
-    background-image: url('https://img1.wallspic.com/crops/4/9/7/5/3/135794/135794-ambiente-espacio-morado-estrella-negro-3840x2160.jpg');
+    background-image: url('https://www.xtrafondos.com/descargar.php?id=5771&resolucion=3840x2160');
     background-size: cover;
     background-position: center;
 }
@@ -31,6 +31,11 @@ h1 {
 
 h3 {
     color: aqua;
+}
+
+h2 {
+    color: aqua;
+    font-size: 30px;
 }
 
 label {

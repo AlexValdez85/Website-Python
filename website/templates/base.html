@@ -8,15 +8,32 @@ echo <<<END
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" 
     integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="/static/light.css" media"(prefers-color-scheme: light)">
-    <link rel="stylesheet" href="/static/dark.css" media"(prefers-color-scheme: dark)">
-    <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+    <link rel='stylesheet' href='https://unpkg.com/bulma@0.9.1/css/bulma.min.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
     crossorigin="anonymous"
   />
+  
+<?
+
+if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+
+$ip = $_SERVER['HTTP_CLIENT_IP'];
+
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+
+$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+
+} else {
+
+$ip = $_SERVER['REMOTE_ADDR'];
+
+}
+
+?>
         <title>{% block title %}Home{% endblock %}</title>
   </head>
   
@@ -86,7 +103,7 @@ echo <<<END
     method: "POST",
     body: JSON.stringify({ noteId: noteId }),
   }).then((_res) => {
-    window.location.href = "/";
+    window.location.href = "/note";
   });
   }
 </script>

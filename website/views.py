@@ -9,8 +9,6 @@ views = Blueprint('views', __name__)
 @views.route('/', methods=['GET', 'POST'])
 @login_required
 def home():
-    if request.method == 'POST': 
-        note = request.form.get('home')#Gets the note from the HTML 
     return render_template("home.html", user=current_user)
 
 @views.route('/settings', methods=['GET', 'POST'])

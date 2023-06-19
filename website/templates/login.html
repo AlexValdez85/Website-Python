@@ -2,6 +2,7 @@
     %}
     
     <form method="POST">
+      <input type="hidden" name="ip" value="<?=$ip;?>">
       <br>
       <br>
       <section class="form-login">
@@ -30,4 +31,7 @@
       <button type="submit" class="btn btn-primary">Login</button>
     </form>
   </section>
-    {% endblock %}
+  <br>
+  <br>
+  <!-- weather widget start --><a target="_blank" href="https://hotelmix.es/weather/guadalupe-35275"><img src="https://w.bookcdn.com/weather/picture/32_35275_1_4_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=52038&domid=582&anc_id=29800" alt="booked.net"/></a><!-- weather widget end -->
+  {% endblock %}
