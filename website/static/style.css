@@ -58,12 +58,3 @@ p {
     justify-content: space-between;
     color: aqua;
 }
-
-.navbar-brand {
-    padding: 0px;
-  }
-  .navbar-brand>img {
-    height: 100%;
-    padding: 15px;
-    width: auto;
-  }
